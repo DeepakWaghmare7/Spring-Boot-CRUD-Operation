@@ -1,0 +1,19 @@
+package com.tka.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tka.dao.VehicalDao;
+import com.tka.entity.Vehical;
+
+@Service
+public class VehicalService {
+
+	@Autowired
+	VehicalDao dao;
+	
+	public String insertData(Vehical v) {
+		String msg = dao.insertData(v);
+		return msg;
+	}
+}
